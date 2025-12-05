@@ -1,4 +1,4 @@
-from pypdevs.DEVS import CoupledDEVS
+from src.pypdevs.DEVS import CoupledDEVS
 from atomicdevs import *
 
 STRATEGY_FIFO = 0
@@ -21,44 +21,71 @@ class FlexibleJobShop(CoupledDEVS):
     def __init__(self,
         seed=0,
         target_num=500,
-        gen_rate=1.0/60.0/4.0,  # once every 4 minutes
+        gen_rate=1.0/60.0/4.0,
         gen_types=[(0, 1, ['A', 'B'], {'A': 15*60, 'B': 10*60}, 2/3), (1, 2, ['B', 'A'], {'A': 20*60, 'B': 13*60}, 1/3)],
         machine_capacities={'A': 3, 'B': 2},
         dispatching_strategy=STRATEGY_FIFO,
-        max_wait_duration=60.0*3.0,  # 3 minutes
-        routing_time_per_size=30.0  # 30 seconds per unit size
+        max_wait_duration=60.0*3.0,
+        routing_time_per_size=30.0
     ):
         super().__init__("FlexibleJobShop")
         
-        # Create generator (provided) - generates infinitely
+        super().__init__("FlexibleJobShop")
+
+        machine_names = list(machine_capacities.keys())
+
         generator = self.addSubModel(Generator(
             seed=seed,
             lambd=gen_rate,
             gen_types=gen_types,
         ))
-        
-        # TODO: Create router based on dispatching strategy
-        # Pass routing_time_per_size to the router constructor
+
         if dispatching_strategy == STRATEGY_FIFO:
-            router = None  # TODO: Create FIFORouter
+            router = self.addSubModel(FIFORouter(
+                machine_names=machine_names,
+                machine_capacities=machine_capacities,
+                routing_time_per_size=routing_time_per_size,
+            ))
         elif dispatching_strategy == STRATEGY_PRIORITY:
-            router = None  # TODO: Create PriorityRouter
-        
-        # TODO: Create machines based on machine_capacities
-        # Note: Processing times come from the products themselves, not from machine parameters
-        machines = {}  # TODO: Dictionary mapping machine_id to Machine instance
-        
-        # Create sink (provided) - terminates when target_num finished products received
+            router = self.addSubModel(PriorityRouter(
+                machine_names=machine_names,
+                machine_capacities=machine_capacities,
+                routing_time_per_size=routing_time_per_size,
+            ))
+        else:
+            raise ValueError("Unknown dispatching strategy")
+
+        machines = {}
+        for mid, cap in machine_capacities.items():
+            machines[mid] = self.addSubModel(Machine(
+                machine_id=mid,
+                capacity=cap,
+                max_wait_duration=max_wait_duration,
+            ))
+
         sink = self.addSubModel(Sink(target_num=target_num))
-        
-        # TODO: Connect the components
-        # - Generator -> Router
-        # - Router -> Machines
-        # - Machines -> Router
-        # - Router -> Sink
-        
-        # Store references for later access
+
+        # Connections
+        # Generator -> Router (shared in_product)
+        self.connectPorts(generator.out_product, router.in_product)
+
+        # Router <-> Machines
+        for mid, m in machines.items():
+            # Router sends to machine
+            self.connectPorts(router.out_machine[mid], m.in_product)
+
+            # Machine sends products back to router
+            self.connectPorts(m.out_product, router.in_product)
+
+            # Machine capacity notifications -> Router
+            self.connectPorts(m.out_capacity, router.in_capacity[mid])
+
+        # Router -> Sink
+        self.connectPorts(router.out_sink, sink.in_product)
+
+        # Store references
         self.generator = generator
+        self.router = router
         self.sink = sink
-        self.machines = machines  # Store machines dict for statistics
+        self.machines = machines
 

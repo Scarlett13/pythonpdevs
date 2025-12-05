@@ -12,7 +12,7 @@ import sys
 # Make sure we can import from the current directory
 sys.path.insert(0, os.path.dirname(__file__))
 
-from pypdevs.simulator import Simulator
+from src.pypdevs.simulator import Simulator
 from plot_template import make_plot_products_script, make_plot_box_script, make_plot_frequency_script
 from system import *
 
@@ -94,7 +94,7 @@ for config_name, config in CONFIGURATIONS.items():
             
             sim = Simulator(sys_model)
             sim.setClassicDEVS()
-            # sim.setVerbose()  # <-- uncomment to see what's going on
+            sim.setVerbose()  # <-- uncomment to see what's going on
             sim.setTerminationCondition(lambda time, model: sys_model.sink.termination_condition())
             sim.simulate()
             
