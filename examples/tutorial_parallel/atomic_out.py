@@ -1,5 +1,5 @@
 ### Model
-from pypdevs.DEVS import *
+from src.pypdevs.DEVS import *
 
 class TrafficLightWithOutput(AtomicDEVS):
 	def __init__(self):
@@ -30,7 +30,7 @@ class TrafficLightWithOutput(AtomicDEVS):
 		return {self.observe: [v]}
 
 ### Experiment
-from pypdevs.simulator import Simulator
+from src.pypdevs.simulator import Simulator
 
 model = TrafficLightWithOutput()
 sim = Simulator(model)

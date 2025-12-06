@@ -1,5 +1,5 @@
 ### Model
-from pypdevs.DEVS import *
+from src.pypdevs.DEVS import *
 
 class TrafficLight(AtomicDEVS):
 	def __init__(self):
@@ -45,7 +45,7 @@ class TrafficLight(AtomicDEVS):
 		return self.state
 
 ### Experiment
-from pypdevs.simulator import Simulator
+from src.pypdevs.simulator import Simulator
 
 model = TrafficLight()
 sim = Simulator(model)

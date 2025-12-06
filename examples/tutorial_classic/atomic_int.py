@@ -1,5 +1,5 @@
 ### Model
-from pypdevs.DEVS import *
+from src.pypdevs.DEVS import *
 
 class TrafficLightAutonomous(AtomicDEVS):
     def __init__(self):
@@ -20,7 +20,7 @@ class TrafficLightAutonomous(AtomicDEVS):
                 "green": 57}[state]
 
 ### Experiment
-from pypdevs.simulator import Simulator
+from src.pypdevs.simulator import Simulator
 
 model = TrafficLightAutonomous()
 sim = Simulator(model)

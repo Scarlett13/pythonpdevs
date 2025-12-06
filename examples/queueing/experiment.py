@@ -1,4 +1,4 @@
-from pypdevs.simulator import Simulator
+from src.pypdevs.simulator import Simulator
 import random
 
 # Import the model we experiment with

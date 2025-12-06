@@ -1,4 +1,4 @@
-from pypdevs.DEVS import AtomicDEVS
+from src.pypdevs.DEVS import AtomicDEVS
 from job import Job
 import random
 

@@ -1,4 +1,4 @@
-from pypdevs.simulator import Simulator
+from src.pypdevs.simulator import Simulator
 
 from mymodel import MyModel
 

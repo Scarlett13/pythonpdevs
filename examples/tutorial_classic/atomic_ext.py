@@ -1,6 +1,6 @@
 ### Model
-from pypdevs.DEVS import *
-from pypdevs.infinity import INFINITY
+from src.pypdevs.DEVS import *
+from src.pypdevs.infinity import INFINITY
 
 class TrafficLight(AtomicDEVS):
     def __init__(self):
@@ -41,7 +41,7 @@ class TrafficLight(AtomicDEVS):
                 return "red"
 
 ### Experiment
-from pypdevs.simulator import Simulator
+from src.pypdevs.simulator import Simulator
 
 model = TrafficLight()
 sim = Simulator(model)

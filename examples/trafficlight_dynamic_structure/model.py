@@ -16,8 +16,8 @@
 import sys
 
 # Import code for DEVS model representation:
-from pypdevs.DEVS import *
-from pypdevs.infinity import INFINITY
+from src.pypdevs.DEVS import *
+from src.pypdevs.infinity import INFINITY
 
 class TrafficLightMode:
     """

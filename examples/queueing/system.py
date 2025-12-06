@@ -1,4 +1,4 @@
-from pypdevs.DEVS import CoupledDEVS
+from src.pypdevs.DEVS import CoupledDEVS
 
 # Import all models to couple
 from generator import Generator

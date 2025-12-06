@@ -14,7 +14,7 @@
 # limitations under the License.
 
 # Import code for model simulation:
-from pypdevs.simulator import Simulator
+from src.pypdevs.simulator import Simulator
 
 # Import the model to be simulated
 from model import TrafficSystem

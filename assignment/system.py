@@ -1,4 +1,4 @@
-from pypdevs.DEVS import CoupledDEVS
+from src.pypdevs.DEVS import CoupledDEVS
 from atomicdevs import *
 
 STRATEGY_FIFO = 0

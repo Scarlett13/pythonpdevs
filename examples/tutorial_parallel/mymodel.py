@@ -1,4 +1,4 @@
-from pypdevs.DEVS import AtomicDEVS
+from src.pypdevs.DEVS import AtomicDEVS
 
 class MyModel(AtomicDEVS):
 	def __init__(self):

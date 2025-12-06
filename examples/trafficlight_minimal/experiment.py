@@ -14,7 +14,7 @@
 # limitations under the License.
 
 # Import code for model simulation, but using the minimal kernel:
-from pypdevs.minimal import Simulator
+from src.pypdevs.minimal import Simulator
 
 # Import the model to be simulated
 from model import TrafficSystem

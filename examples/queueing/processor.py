@@ -1,4 +1,4 @@
-from pypdevs.DEVS import AtomicDEVS
+from src.pypdevs.DEVS import AtomicDEVS
 
 # Define the state of the processor as a structured object
 class ProcessorState(object):

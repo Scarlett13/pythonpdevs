@@ -14,8 +14,8 @@
 # limitations under the License.
 
 # Import code for DEVS model representation:
-from pypdevs.infinity import *
-from pypdevs.DEVS import *
+from src.pypdevs.infinity import *
+from src.pypdevs.DEVS import *
 
 #    ======================================================================    #
 

@@ -1,4 +1,4 @@
-from pypdevs.DEVS import *
+from src.pypdevs.DEVS import *
 
 class Policeman(AtomicDEVS):
 	def __init__(self):

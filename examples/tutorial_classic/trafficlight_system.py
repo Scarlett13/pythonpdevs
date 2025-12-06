@@ -1,5 +1,5 @@
 ### Model
-from pypdevs.DEVS import *
+from src.pypdevs.DEVS import *
 
 from trafficlight import TrafficLight
 from policeman import Policeman
@@ -24,7 +24,7 @@ class TrafficLightSystem(CoupledDEVS):
             return self.light
 
 ### Experiment
-from pypdevs.simulator import Simulator
+from src.pypdevs.simulator import Simulator
 sim = Simulator(TrafficLightSystem())
 sim.setVerbose()
 sim.setTerminationTime(1000)

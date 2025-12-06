@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from pypdevs.simulator import Simulator
+from src.pypdevs.simulator import Simulator
 
 try:
     from Tkinter import *
