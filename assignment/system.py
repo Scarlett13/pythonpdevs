@@ -19,7 +19,7 @@ class FlexibleJobShop(CoupledDEVS):
         routing_time_per_size (float): Time to route a product per unit size
     """
     def __init__(self,
-        seed=0,
+        seed=1,
         target_num=500,
         gen_rate=1.0/60.0/4.0,  # once every 4 minutes
         gen_types=[(0, 1, ['A', 'B'], {'A': 15*60, 'B': 10*60}, 2/3), (1, 2, ['B', 'A'], {'A': 20*60, 'B': 13*60}, 1/3)],
@@ -38,27 +38,57 @@ class FlexibleJobShop(CoupledDEVS):
         ))
         
         # TODO: Create router based on dispatching strategy
+        machine_names = list(machine_capacities.keys())
         # Pass routing_time_per_size to the router constructor
         if dispatching_strategy == STRATEGY_FIFO:
-            router = None  # TODO: Create FIFORouter
+            router = self.addSubModel(FIFORouter(
+                machine_names=machine_names,
+                machine_capacities=machine_capacities,
+                routing_time_per_size=routing_time_per_size
+            ))
         elif dispatching_strategy == STRATEGY_PRIORITY:
-            router = None  # TODO: Create PriorityRouter
+            router = self.addSubModel(PriorityRouter(
+                machine_names=machine_names,
+                machine_capacities=machine_capacities,
+                routing_time_per_size=routing_time_per_size
+            ))
         
         # TODO: Create machines based on machine_capacities
         # Note: Processing times come from the products themselves, not from machine parameters
-        machines = {}  # TODO: Dictionary mapping machine_id to Machine instance
+        machines = {}
+        for machine_id, capacity in machine_capacities.items():
+            machines[machine_id] = self.addSubModel(Machine(
+                machine_id=machine_id,
+                capacity=capacity,
+                max_wait_duration=max_wait_duration,
+            ))
+
+
         
         # Create sink (provided) - terminates when target_num finished products received
         sink = self.addSubModel(Sink(target_num=target_num))
         
         # TODO: Connect the components
         # - Generator -> Router
+        self.connectPorts(generator.out_product, router.in_product)
         # - Router -> Machines
+        for machine_id, machine in machines.items():
+            # Router -> Machine
+            self.connectPorts(router.out_machine[machine_id], machine.in_product)
+
+            # Machine -> Router (processed products)
+            self.connectPorts(machine.out_product, router.in_product)
+
+            # Machine -> Router (capacity notifications)
+            self.connectPorts(machine.out_capacity, router.in_capacity[machine_id])
+            
         # - Machines -> Router
         # - Router -> Sink
+        self.connectPorts(router.out_sink, sink.in_product)
         
         # Store references for later access
         self.generator = generator
+        self.router = router
         self.sink = sink
         self.machines = machines  # Store machines dict for statistics
 

@@ -15,13 +15,16 @@ sys.path.insert(0, os.path.dirname(__file__))
 from src.pypdevs.simulator import Simulator
 from plot_template import make_plot_products_script, make_plot_box_script, make_plot_frequency_script
 from system import *
+import atomicdevs, system
+print("atomicdevs loaded from:", atomicdevs.__file__)
+print("system loaded from:", system.__file__)
 
 ## Parameters ##
 
-target_num = 5  # Number of finished products required to terminate simulation
+target_num = 500  # Number of finished products required to terminate simulation
 
 # How often to generate a product (on average)
-gen_rate = 1/60/1  # once every 1 minutes
+gen_rate = 1/60/4  # once every 4 minutes
 
 # Dispatching strategies
 strategies = {
@@ -63,8 +66,8 @@ CONFIGURATIONS = {
 }
 
 # The different parameters to try for max_wait_duration
-# max_wait_durations = [0.0, 3.0*60, 6.0*60]  # 0, 3, 6 minutes (in seconds)
-max_wait_durations = [180.0]  # <-- uncomment if you only want to run an experiment with this value (useful for debugging)
+max_wait_durations = [0.0, 3.0*60, 6.0*60]  # 0, 3, 6 minutes (in seconds)
+# max_wait_durations = [180.0]  # <-- uncomment if you only want to run an experiment with this value (useful for debugging)
 
 outdir = "assignment_output"
 
@@ -94,7 +97,7 @@ for config_name, config in CONFIGURATIONS.items():
             
             sim = Simulator(sys_model)
             sim.setClassicDEVS()
-            # sim.setVerbose()  # <-- uncomment to see what's going on
+            sim.setVerbose()  # <-- uncomment to see what's going on
             sim.setTerminationCondition(lambda time, model: sys_model.sink.termination_condition())
             sim.simulate()
             
