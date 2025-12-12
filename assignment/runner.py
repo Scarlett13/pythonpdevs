@@ -97,7 +97,7 @@ for config_name, config in CONFIGURATIONS.items():
             
             sim = Simulator(sys_model)
             sim.setClassicDEVS()
-            sim.setVerbose()  # <-- uncomment to see what's going on
+            # sim.setVerbose()  # <-- uncomment to see what's going on
             sim.setTerminationCondition(lambda time, model: sys_model.sink.termination_condition())
             sim.simulate()
             
