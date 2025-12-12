@@ -121,7 +121,7 @@ for config_name, config in CONFIGURATIONS.items():
         # Write out all the product flow times for every 'max_wait_duration' parameter
         #  for every product, we write a line:
         #    <product_num>, time_max_wait0, time_max_wait1, time_max_wait2
-        filename = f'{outdir}/output_{config_name}_{strategy_name}.csv'
+        filename = f'{outdir}/{strategy_name}/output_{config_name}_{strategy_name}.csv'
         with open(filename, 'w') as f:
             try:
                 for i in range(target_num):
