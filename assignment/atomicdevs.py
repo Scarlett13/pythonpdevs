@@ -3,8 +3,6 @@ from environment import *
 import abc
 import dataclasses
 
-# ... [Keep RouterState and Imports same as before] ...
-
 @dataclasses.dataclass
 class RouterState:
     last_time: float = 0.0
