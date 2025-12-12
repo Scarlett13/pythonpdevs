@@ -1,0 +1,973 @@
+
+__  Current Time: 3724822.380545 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                Input Port Configuration:
+                        port <in_product>:
+                                [<environment.Product object at 0x000002A02777F7F0>]
+                        port <in_capacity_A>:
+                        port <in_capacity_B>:
+                New State: RouterState(last_time=3724822.380545, total_queue_area=13898823344.888412)
+                Next scheduled internal transition at time 3724852.380545
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.Generator>
+                New State: <environment.GeneratorState object at 0x000002A026B4DD30>
+                Output Port Configuration:
+                        port <out_product>:
+                                [<environment.Product object at 0x000002A02778C230>]
+                Next scheduled internal transition at time 3724912.127879
+
+
+__  Current Time: 3724852.380545 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.Machine_A>
+                Input Port Configuration:
+                        port <in_product>:
+                                [<environment.Product object at 0x000002A0275507D0>]
+                New State: MachineState(total_processing_time=3568500.0, total_occupancy_product=3568500.0, num_batches=3965)
+                Next scheduled internal transition at time 3724852.380545
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                New State: RouterState(last_time=3724852.380545, total_queue_area=13899047024.888412)
+                Output Port Configuration:
+                        port <out_A>:
+                                [<environment.Product object at 0x000002A027126710>]
+                        port <out_B>:
+                        port <out_sink>:
+                Next scheduled internal transition at time 3724882.380545
+
+
+__  Current Time: 3724852.380545 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                Input Port Configuration:
+                        port <in_product>:
+                        port <in_capacity_A>:
+                                [0]
+                        port <in_capacity_B>:
+                New State: RouterState(last_time=3724852.380545, total_queue_area=13899047024.888412)
+                Next scheduled internal transition at time inf
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.Machine_A>
+                New State: MachineState(total_processing_time=3569400.0, total_occupancy_product=3569400.0, num_batches=3966)
+                Output Port Configuration:
+                        port <out_product>:
+                        port <out_capacity>:
+                                [0]
+                Next scheduled internal transition at time 3725752.380545
+
+
+__  Current Time: 3724912.127879 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                Input Port Configuration:
+                        port <in_product>:
+                                [<environment.Product object at 0x000002A02778C2D0>]
+                        port <in_capacity_A>:
+                        port <in_capacity_B>:
+                New State: RouterState(last_time=3724912.127879, total_queue_area=13899492441.26338)
+                Next scheduled internal transition at time inf
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.Generator>
+                New State: <environment.GeneratorState object at 0x000002A026B4DD30>
+                Output Port Configuration:
+                        port <out_product>:
+                                [<environment.Product object at 0x000002A02777FD90>]
+                Next scheduled internal transition at time 3725001.616801
+
+
+__  Current Time: 3725001.616801 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                Input Port Configuration:
+                        port <in_product>:
+                                [<environment.Product object at 0x000002A02777FD90>]
+                        port <in_capacity_A>:
+                        port <in_capacity_B>:
+                New State: RouterState(last_time=3725001.616801, total_queue_area=13900159670.665815)
+                Next scheduled internal transition at time inf
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.Generator>
+                New State: <environment.GeneratorState object at 0x000002A026B4DD30>
+                Output Port Configuration:
+                        port <out_product>:
+                                [<environment.Product object at 0x000002A02778C4B0>]
+                Next scheduled internal transition at time 3725173.788682
+
+
+__  Current Time: 3725173.788682 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                Input Port Configuration:
+                        port <in_product>:
+                                [<environment.Product object at 0x000002A02778C230>]
+                        port <in_capacity_A>:
+                        port <in_capacity_B>:
+                New State: RouterState(last_time=3725173.788682, total_queue_area=13901443556.38243)
+                Next scheduled internal transition at time 3725203.788682
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.Generator>
+                New State: <environment.GeneratorState object at 0x000002A026B4DD30>
+                Output Port Configuration:
+                        port <out_product>:
+                                [<environment.Product object at 0x000002A02778C0F0>]
+                Next scheduled internal transition at time 3725604.160506
+
+
+__  Current Time: 3725203.788682 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.Sink>
+                Input Port Configuration:
+                        port <in_product>:
+                                [<environment.Product object at 0x000002A027126710>]
+                New State: <environment.SinkState object at 0x000002A026B4E660>
+                Next scheduled internal transition at time inf
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                New State: RouterState(last_time=3725203.788682, total_queue_area=13901667296.38243)
+                Output Port Configuration:
+                        port <out_A>:
+                        port <out_B>:
+                        port <out_sink>:
+                                [<environment.Product object at 0x000002A02777D450>]
+                Next scheduled internal transition at time 3725263.788682
+
+
+__  Current Time: 3725234.398389 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                Input Port Configuration:
+                        port <in_product>:
+                                [<environment.Product object at 0x000002A02778C370>]
+                        port <in_capacity_A>:
+                        port <in_capacity_B>:
+                                [2]
+                New State: RouterState(last_time=3725234.398389, total_queue_area=13901895552.96753)
+                Next scheduled internal transition at time 3725294.398389
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.Machine_B>
+                New State: MachineState(total_processing_time=3236220.0, total_occupancy_product=6472440.0, num_batches=4149)
+                Output Port Configuration:
+                        port <out_product>:
+                                [<environment.Product object at 0x000002A02777F390>]
+                        port <out_capacity>:
+                                [2]
+                Next scheduled internal transition at time inf
+
+
+__  Current Time: 3725294.398389 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.Sink>
+                Input Port Configuration:
+                        port <in_product>:
+                                [<environment.Product object at 0x000002A02777D450>]
+                New State: <environment.SinkState object at 0x000002A026B4E660>
+                Next scheduled internal transition at time inf
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                New State: RouterState(last_time=3725294.398389, total_queue_area=13902343032.96753)
+                Output Port Configuration:
+                        port <out_A>:
+                        port <out_B>:
+                        port <out_sink>:
+                                [<environment.Product object at 0x000002A02777F610>]
+                Next scheduled internal transition at time 3725354.398389
+
+
+__  Current Time: 3725354.398389 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.Machine_B>
+                Input Port Configuration:
+                        port <in_product>:
+                                [<environment.Product object at 0x000002A02777F610>]
+                New State: MachineState(total_processing_time=3236220.0, total_occupancy_product=6472440.0, num_batches=4149)
+                Next scheduled internal transition at time 3725354.398389
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                New State: RouterState(last_time=3725354.398389, total_queue_area=13902790452.96753)
+                Output Port Configuration:
+                        port <out_A>:
+                        port <out_B>:
+                                [<environment.Product object at 0x000002A027550AF0>]
+                        port <out_sink>:
+                Next scheduled internal transition at time inf
+
+
+__  Current Time: 3725354.398389 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                Input Port Configuration:
+                        port <in_product>:
+                        port <in_capacity_A>:
+                        port <in_capacity_B>:
+                                [0]
+                New State: RouterState(last_time=3725354.398389, total_queue_area=13902790452.96753)
+                Next scheduled internal transition at time inf
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.Machine_B>
+                New State: MachineState(total_processing_time=3237000.0, total_occupancy_product=6474000.0, num_batches=4150)
+                Output Port Configuration:
+                        port <out_product>:
+                        port <out_capacity>:
+                                [0]
+                Next scheduled internal transition at time 3726134.398389
+
+
+__  Current Time: 3725604.160506 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                Input Port Configuration:
+                        port <in_product>:
+                                [<environment.Product object at 0x000002A02778C410>]
+                        port <in_capacity_A>:
+                        port <in_capacity_B>:
+                New State: RouterState(last_time=3725604.160506, total_queue_area=13904652679.31188)
+                Next scheduled internal transition at time inf
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.Generator>
+                New State: <environment.GeneratorState object at 0x000002A026B4DD30>
+                Output Port Configuration:
+                        port <out_product>:
+                                [<environment.Product object at 0x000002A02777F390>]
+                Next scheduled internal transition at time 3726057.743275
+
+
+__  Current Time: 3725752.380545 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                Input Port Configuration:
+                        port <in_product>:
+                                [<environment.Product object at 0x000002A02778C190>]
+                        port <in_capacity_A>:
+                                [3]
+                        port <in_capacity_B>:
+                New State: RouterState(last_time=3725752.380545, total_queue_area=13905757956.142706)
+                Next scheduled internal transition at time 3725782.380545
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.Machine_A>
+                New State: MachineState(total_processing_time=3569400.0, total_occupancy_product=3569400.0, num_batches=3966)
+                Output Port Configuration:
+                        port <out_product>:
+                                [<environment.Product object at 0x000002A0275507D0>]
+                        port <out_capacity>:
+                                [3]
+                Next scheduled internal transition at time inf
+
+
+__  Current Time: 3725782.380545 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.Machine_A>
+                Input Port Configuration:
+                        port <in_product>:
+                                [<environment.Product object at 0x000002A027550AF0>]
+                New State: MachineState(total_processing_time=3569400.0, total_occupancy_product=3569400.0, num_batches=3966)
+                Next scheduled internal transition at time 3725782.380545
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                New State: RouterState(last_time=3725782.380545, total_queue_area=13905981696.142706)
+                Output Port Configuration:
+                        port <out_A>:
+                                [<environment.Product object at 0x000002A027126350>]
+                        port <out_B>:
+                        port <out_sink>:
+                Next scheduled internal transition at time 3725812.380545
+
+
+__  Current Time: 3725782.380545 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                Input Port Configuration:
+                        port <in_product>:
+                        port <in_capacity_A>:
+                                [0]
+                        port <in_capacity_B>:
+                New State: RouterState(last_time=3725782.380545, total_queue_area=13905981696.142706)
+                Next scheduled internal transition at time inf
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.Machine_A>
+                New State: MachineState(total_processing_time=3570300.0, total_occupancy_product=3570300.0, num_batches=3967)
+                Output Port Configuration:
+                        port <out_product>:
+                        port <out_capacity>:
+                                [0]
+                Next scheduled internal transition at time 3726682.380545
+
+
+__  Current Time: 3726057.743275 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                Input Port Configuration:
+                        port <in_product>:
+                                [<environment.Product object at 0x000002A02777F390>]
+                        port <in_capacity_A>:
+                        port <in_capacity_B>:
+                New State: RouterState(last_time=3726057.743275, total_queue_area=13908035076.020313)
+                Next scheduled internal transition at time 3726087.743275
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.Generator>
+                New State: <environment.GeneratorState object at 0x000002A026B4DD30>
+                Output Port Configuration:
+                        port <out_product>:
+                                [<environment.Product object at 0x000002A0275507D0>]
+                Next scheduled internal transition at time 3726457.459071
+
+
+__  Current Time: 3726087.743275 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.Sink>
+                Input Port Configuration:
+                        port <in_product>:
+                                [<environment.Product object at 0x000002A027126350>]
+                New State: <environment.SinkState object at 0x000002A026B4E660>
+                Next scheduled internal transition at time inf
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                New State: RouterState(last_time=3726087.743275, total_queue_area=13908258816.020313)
+                Output Port Configuration:
+                        port <out_A>:
+                        port <out_B>:
+                        port <out_sink>:
+                                [<environment.Product object at 0x000002A02777F2F0>]
+                Next scheduled internal transition at time inf
+
+
+__  Current Time: 3726134.398389 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                Input Port Configuration:
+                        port <in_product>:
+                                [<environment.Product object at 0x000002A02778C690>]
+                        port <in_capacity_A>:
+                        port <in_capacity_B>:
+                                [2]
+                New State: RouterState(last_time=3726134.398389, total_queue_area=13908606723.205412)
+                Next scheduled internal transition at time 3726194.398389
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.Machine_B>
+                New State: MachineState(total_processing_time=3237000.0, total_occupancy_product=6474000.0, num_batches=4150)
+                Output Port Configuration:
+                        port <out_product>:
+                                [<environment.Product object at 0x000002A02777F610>]
+                        port <out_capacity>:
+                                [2]
+                Next scheduled internal transition at time inf
+
+
+__  Current Time: 3726194.398389 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.Machine_B>
+                Input Port Configuration:
+                        port <in_product>:
+                                [<environment.Product object at 0x000002A02777F2F0>]
+                New State: MachineState(total_processing_time=3237000.0, total_occupancy_product=6474000.0, num_batches=4150)
+                Next scheduled internal transition at time 3726194.398389
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                New State: RouterState(last_time=3726194.398389, total_queue_area=13909054203.205412)
+                Output Port Configuration:
+                        port <out_A>:
+                        port <out_B>:
+                                [<environment.Product object at 0x000002A027550CD0>]
+                        port <out_sink>:
+                Next scheduled internal transition at time 3726254.398389
+
+
+__  Current Time: 3726194.398389 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                Input Port Configuration:
+                        port <in_product>:
+                        port <in_capacity_A>:
+                        port <in_capacity_B>:
+                                [0]
+                New State: RouterState(last_time=3726194.398389, total_queue_area=13909054203.205412)
+                Next scheduled internal transition at time 3726254.398389
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.Machine_B>
+                New State: MachineState(total_processing_time=3237780.0, total_occupancy_product=6475560.0, num_batches=4151)
+                Output Port Configuration:
+                        port <out_product>:
+                        port <out_capacity>:
+                                [0]
+                Next scheduled internal transition at time 3726974.398389
+
+
+__  Current Time: 3726254.398389 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.Sink>
+                Input Port Configuration:
+                        port <in_product>:
+                                [<environment.Product object at 0x000002A027550CD0>]
+                New State: <environment.SinkState object at 0x000002A026B4E660>
+                Next scheduled internal transition at time inf
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                New State: RouterState(last_time=3726254.398389, total_queue_area=13909501623.205412)
+                Output Port Configuration:
+                        port <out_A>:
+                        port <out_B>:
+                        port <out_sink>:
+                                [<environment.Product object at 0x000002A02778C370>]
+                Next scheduled internal transition at time inf
+
+
+__  Current Time: 3726457.459071 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                Input Port Configuration:
+                        port <in_product>:
+                                [<environment.Product object at 0x000002A0275507D0>]
+                        port <in_capacity_A>:
+                        port <in_capacity_B>:
+                New State: RouterState(last_time=3726457.459071, total_queue_area=13911015643.650404)
+                Next scheduled internal transition at time inf
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.Generator>
+                New State: <environment.GeneratorState object at 0x000002A026B4DD30>
+                Output Port Configuration:
+                        port <out_product>:
+                                [<environment.Product object at 0x000002A02777F610>]
+                Next scheduled internal transition at time 3726704.753561
+
+
+__  Current Time: 3726682.380545 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                Input Port Configuration:
+                        port <in_product>:
+                                [<environment.Product object at 0x000002A02778C550>]
+                        port <in_capacity_A>:
+                                [3]
+                        port <in_capacity_B>:
+                New State: RouterState(last_time=3726682.380545, total_queue_area=13912692883.082022)
+                Next scheduled internal transition at time 3726712.380545
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.Machine_A>
+                New State: MachineState(total_processing_time=3570300.0, total_occupancy_product=3570300.0, num_batches=3967)
+                Output Port Configuration:
+                        port <out_product>:
+                                [<environment.Product object at 0x000002A027550AF0>]
+                        port <out_capacity>:
+                                [3]
+                Next scheduled internal transition at time inf
+
+
+__  Current Time: 3726704.753561 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                Input Port Configuration:
+                        port <in_product>:
+                                [<environment.Product object at 0x000002A02777F610>]
+                        port <in_capacity_A>:
+                        port <in_capacity_B>:
+                New State: RouterState(last_time=3726704.753561, total_queue_area=13912859741.035349)
+                Next scheduled internal transition at time 3726734.753561
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.Generator>
+                New State: <environment.GeneratorState object at 0x000002A026B4DD30>
+                Output Port Configuration:
+                        port <out_product>:
+                                [<environment.Product object at 0x000002A02778C730>]
+                Next scheduled internal transition at time 3726935.031330
+
+
+__  Current Time: 3726734.753561 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.Machine_A>
+                Input Port Configuration:
+                        port <in_product>:
+                                [<environment.Product object at 0x000002A02778C7D0>]
+                New State: MachineState(total_processing_time=3570300.0, total_occupancy_product=3570300.0, num_batches=3967)
+                Next scheduled internal transition at time 3726734.753561
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                New State: RouterState(last_time=3726734.753561, total_queue_area=13913083511.035349)
+                Output Port Configuration:
+                        port <out_A>:
+                                [<environment.Product object at 0x000002A027056210>]
+                        port <out_B>:
+                        port <out_sink>:
+                Next scheduled internal transition at time 3726764.753561
+
+
+__  Current Time: 3726734.753561 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                Input Port Configuration:
+                        port <in_product>:
+                        port <in_capacity_A>:
+                                [0]
+                        port <in_capacity_B>:
+                New State: RouterState(last_time=3726734.753561, total_queue_area=13913083511.035349)
+                Next scheduled internal transition at time inf
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.Machine_A>
+                New State: MachineState(total_processing_time=3571200.0, total_occupancy_product=3571200.0, num_batches=3968)
+                Output Port Configuration:
+                        port <out_product>:
+                        port <out_capacity>:
+                                [0]
+                Next scheduled internal transition at time 3727634.753561
+
+
+__  Current Time: 3726935.031330 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                Input Port Configuration:
+                        port <in_product>:
+                                [<environment.Product object at 0x000002A02778C870>]
+                        port <in_capacity_A>:
+                        port <in_capacity_B>:
+                New State: RouterState(last_time=3726935.03133, total_queue_area=13914577182.636553)
+                Next scheduled internal transition at time inf
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.Generator>
+                New State: <environment.GeneratorState object at 0x000002A026B4DD30>
+                Output Port Configuration:
+                        port <out_product>:
+                                [<environment.Product object at 0x000002A027550AF0>]
+                Next scheduled internal transition at time 3727034.809170
+
+
+__  Current Time: 3726974.398389 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                Input Port Configuration:
+                        port <in_product>:
+                                [<environment.Product object at 0x000002A02778C0F0>]
+                        port <in_capacity_A>:
+                        port <in_capacity_B>:
+                                [2]
+                New State: RouterState(last_time=3726974.398389, total_queue_area=13914870821.529633)
+                Next scheduled internal transition at time 3727004.398389
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.Machine_B>
+                New State: MachineState(total_processing_time=3237780.0, total_occupancy_product=6475560.0, num_batches=4151)
+                Output Port Configuration:
+                        port <out_product>:
+                                [<environment.Product object at 0x000002A02777F2F0>]
+                        port <out_capacity>:
+                                [2]
+                Next scheduled internal transition at time inf
+
+
+__  Current Time: 3727004.398389 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.Sink>
+                Input Port Configuration:
+                        port <in_product>:
+                                [<environment.Product object at 0x000002A027056210>]
+                New State: <environment.SinkState object at 0x000002A026B4E660>
+                Next scheduled internal transition at time inf
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                New State: RouterState(last_time=3727004.398389, total_queue_area=13915094621.529633)
+                Output Port Configuration:
+                        port <out_A>:
+                        port <out_B>:
+                        port <out_sink>:
+                                [<environment.Product object at 0x000002A02778C190>]
+                Next scheduled internal transition at time 3727064.398389
+
+
+__  Current Time: 3727034.809170 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                Input Port Configuration:
+                        port <in_product>:
+                                [<environment.Product object at 0x000002A027550AF0>]
+                        port <in_capacity_A>:
+                        port <in_capacity_B>:
+                New State: RouterState(last_time=3727034.80917, total_queue_area=13915321455.54511)
+                Next scheduled internal transition at time 3727094.809170
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.Generator>
+                New State: <environment.GeneratorState object at 0x000002A026B4DD30>
+                Output Port Configuration:
+                        port <out_product>:
+                                [<environment.Product object at 0x000002A02778C730>]
+                Next scheduled internal transition at time 3727436.427503
+
+
+__  Current Time: 3727094.809170 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.Machine_B>
+                Input Port Configuration:
+                        port <in_product>:
+                                [<environment.Product object at 0x000002A02778CA50>]
+                New State: MachineState(total_processing_time=3237780.0, total_occupancy_product=6475560.0, num_batches=4151)
+                Next scheduled internal transition at time 3727094.809170
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                New State: RouterState(last_time=3727094.80917, total_queue_area=13915769055.54511)
+                Output Port Configuration:
+                        port <out_A>:
+                        port <out_B>:
+                                [<environment.Product object at 0x000002A027551810>]
+                        port <out_sink>:
+                Next scheduled internal transition at time 3727154.809170
+
+
+__  Current Time: 3727094.809170 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                Input Port Configuration:
+                        port <in_product>:
+                        port <in_capacity_A>:
+                        port <in_capacity_B>:
+                                [0]
+                New State: RouterState(last_time=3727094.80917, total_queue_area=13915769055.54511)
+                Next scheduled internal transition at time 3727154.809170
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.Machine_B>
+                New State: MachineState(total_processing_time=3238560.0, total_occupancy_product=6477120.0, num_batches=4152)
+                Output Port Configuration:
+                        port <out_product>:
+                        port <out_capacity>:
+                                [0]
+                Next scheduled internal transition at time 3727874.809170
+
+
+__  Current Time: 3727154.809170 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.Sink>
+                Input Port Configuration:
+                        port <in_product>:
+                                [<environment.Product object at 0x000002A027551810>]
+                New State: <environment.SinkState object at 0x000002A026B4E660>
+                Next scheduled internal transition at time inf
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                New State: RouterState(last_time=3727154.80917, total_queue_area=13916216595.54511)
+                Output Port Configuration:
+                        port <out_A>:
+                        port <out_B>:
+                        port <out_sink>:
+                                [<environment.Product object at 0x000002A02778C690>]
+                Next scheduled internal transition at time inf
+
+
+__  Current Time: 3727436.427503 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                Input Port Configuration:
+                        port <in_product>:
+                                [<environment.Product object at 0x000002A02778C9B0>]
+                        port <in_capacity_A>:
+                        port <in_capacity_B>:
+                New State: RouterState(last_time=3727436.427503, total_queue_area=13918316905.072626)
+                Next scheduled internal transition at time inf
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.Generator>
+                New State: <environment.GeneratorState object at 0x000002A026B4DD30>
+                Output Port Configuration:
+                        port <out_product>:
+                                [<environment.Product object at 0x000002A02777F2F0>]
+                Next scheduled internal transition at time 3727501.106149
+
+
+__  Current Time: 3727501.106149 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                Input Port Configuration:
+                        port <in_product>:
+                                [<environment.Product object at 0x000002A02777F2F0>]
+                        port <in_capacity_A>:
+                        port <in_capacity_B>:
+                New State: RouterState(last_time=3727501.106149, total_queue_area=13918799343.093142)
+                Next scheduled internal transition at time inf
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.Generator>
+                New State: <environment.GeneratorState object at 0x000002A026B4DD30>
+                Output Port Configuration:
+                        port <out_product>:
+                                [<environment.Product object at 0x000002A02778CAF0>]
+                Next scheduled internal transition at time 3727976.368474
+
+
+__  Current Time: 3727634.753561 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                Input Port Configuration:
+                        port <in_product>:
+                                [<environment.Product object at 0x000002A02778C4B0>]
+                        port <in_capacity_A>:
+                                [3]
+                        port <in_capacity_B>:
+                New State: RouterState(last_time=3727634.753561, total_queue_area=13919796352.78666)
+                Next scheduled internal transition at time 3727664.753561
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.Machine_A>
+                New State: MachineState(total_processing_time=3571200.0, total_occupancy_product=3571200.0, num_batches=3968)
+                Output Port Configuration:
+                        port <out_product>:
+                                [<environment.Product object at 0x000002A02778C7D0>]
+                        port <out_capacity>:
+                                [3]
+                Next scheduled internal transition at time inf
+
+
+__  Current Time: 3727664.753561 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.Machine_A>
+                Input Port Configuration:
+                        port <in_product>:
+                                [<environment.Product object at 0x000002A02778C910>]
+                New State: MachineState(total_processing_time=3571200.0, total_occupancy_product=3571200.0, num_batches=3968)
+                Next scheduled internal transition at time 3727664.753561
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                New State: RouterState(last_time=3727664.753561, total_queue_area=13920020182.78666)
+                Output Port Configuration:
+                        port <out_A>:
+                                [<environment.Product object at 0x000002A027126670>]
+                        port <out_B>:
+                        port <out_sink>:
+                Next scheduled internal transition at time 3727694.753561
+
+
+__  Current Time: 3727664.753561 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                Input Port Configuration:
+                        port <in_product>:
+                        port <in_capacity_A>:
+                                [0]
+                        port <in_capacity_B>:
+                New State: RouterState(last_time=3727664.753561, total_queue_area=13920020182.78666)
+                Next scheduled internal transition at time inf
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.Machine_A>
+                New State: MachineState(total_processing_time=3572100.0, total_occupancy_product=3572100.0, num_batches=3969)
+                Output Port Configuration:
+                        port <out_product>:
+                        port <out_capacity>:
+                                [0]
+                Next scheduled internal transition at time 3728564.753561
+
+
+__  Current Time: 3727874.809170 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                Input Port Configuration:
+                        port <in_product>:
+                                [<environment.Product object at 0x000002A02778C5F0>]
+                        port <in_capacity_A>:
+                        port <in_capacity_B>:
+                                [2]
+                New State: RouterState(last_time=3727874.80917, total_queue_area=13921587197.629799)
+                Next scheduled internal transition at time 3727934.809170
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.Machine_B>
+                New State: MachineState(total_processing_time=3238560.0, total_occupancy_product=6477120.0, num_batches=4152)
+                Output Port Configuration:
+                        port <out_product>:
+                                [<environment.Product object at 0x000002A02778CA50>]
+                        port <out_capacity>:
+                                [2]
+                Next scheduled internal transition at time inf
+
+
+__  Current Time: 3727934.809170 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.Sink>
+                Input Port Configuration:
+                        port <in_product>:
+                                [<environment.Product object at 0x000002A027126670>]
+                New State: <environment.SinkState object at 0x000002A026B4E660>
+                Next scheduled internal transition at time inf
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                New State: RouterState(last_time=3727934.80917, total_queue_area=13922034857.629799)
+                Output Port Configuration:
+                        port <out_A>:
+                        port <out_B>:
+                        port <out_sink>:
+                                [<environment.Product object at 0x000002A02778C0F0>]
+                Next scheduled internal transition at time 3727964.809170
+
+
+__  Current Time: 3727964.809170 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.Sink>
+                Input Port Configuration:
+                        port <in_product>:
+                                [<environment.Product object at 0x000002A02778C690>]
+                New State: <environment.SinkState object at 0x000002A026B4E660>
+                Next scheduled internal transition at time inf
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                New State: RouterState(last_time=3727964.80917, total_queue_area=13922258657.629799)
+                Output Port Configuration:
+                        port <out_A>:
+                        port <out_B>:
+                        port <out_sink>:
+                                [<environment.Product object at 0x000002A02778C550>]
+                Next scheduled internal transition at time 3728024.809170
+
+
+__  Current Time: 3727976.368474 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                Input Port Configuration:
+                        port <in_product>:
+                                [<environment.Product object at 0x000002A02778C730>]
+                        port <in_capacity_A>:
+                        port <in_capacity_B>:
+                New State: RouterState(last_time=3727976.368474, total_queue_area=13922344878.478338)
+                Next scheduled internal transition at time 3728036.368474
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.Generator>
+                New State: <environment.GeneratorState object at 0x000002A026B4DD30>
+                Output Port Configuration:
+                        port <out_product>:
+                                [<environment.Product object at 0x000002A02778C7D0>]
+                Next scheduled internal transition at time 3728048.796824
+
+
+__  Current Time: 3728036.368474 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.Machine_B>
+                Input Port Configuration:
+                        port <in_product>:
+                                [<environment.Product object at 0x000002A02778C370>]
+                New State: MachineState(total_processing_time=3238560.0, total_occupancy_product=6477120.0, num_batches=4152)
+                Next scheduled internal transition at time 3728036.368474
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                New State: RouterState(last_time=3728036.368474, total_queue_area=13922792478.478338)
+                Output Port Configuration:
+                        port <out_A>:
+                        port <out_B>:
+                                [<environment.Product object at 0x000002A027551770>]
+                        port <out_sink>:
+                Next scheduled internal transition at time inf
+
+
+__  Current Time: 3728036.368474 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                Input Port Configuration:
+                        port <in_product>:
+                        port <in_capacity_A>:
+                        port <in_capacity_B>:
+                                [0]
+                New State: RouterState(last_time=3728036.368474, total_queue_area=13922792478.478338)
+                Next scheduled internal transition at time inf
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.Machine_B>
+                New State: MachineState(total_processing_time=3239340.0, total_occupancy_product=6478680.0, num_batches=4153)
+                Output Port Configuration:
+                        port <out_product>:
+                        port <out_capacity>:
+                                [0]
+                Next scheduled internal transition at time 3728816.368474
+
+
+__  Current Time: 3728048.796824 __________________________________________
+
+
+        EXTERNAL TRANSITION in model <FlexibleJobShop.FIFORouter>
+                Input Port Configuration:
+                        port <in_product>:
+                                [<environment.Product object at 0x000002A02778C0F0>]
+                        port <in_capacity_A>:
+                        port <in_capacity_B>:
+                New State: RouterState(last_time=3728048.796824, total_queue_area=13922885181.540987)
+                Next scheduled internal transition at time inf
+
+
+        INTERNAL TRANSITION in model <FlexibleJobShop.Generator>
+                New State: <environment.GeneratorState object at 0x000002A026B4DD30>
+                Output Port Configuration:
+                        port <out_product>:
+                                [<environment.Product object at 0x000002A02778CC30>]
+                Next scheduled internal transition at time 3728212.759172

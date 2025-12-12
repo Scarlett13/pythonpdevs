@@ -30,7 +30,7 @@ gen_rate = 1/60/4  # once every 4 minutes
 strategies = {
     # you can comment out one of these lines to reduce the number of experiments (useful for debugging):
     STRATEGY_FIFO: "fifo",
-    STRATEGY_PRIORITY: "priority",
+    # STRATEGY_PRIORITY: "priority",
 }
 
 # System configurations
@@ -101,9 +101,26 @@ for config_name, config in CONFIGURATIONS.items():
             sim.setTerminationCondition(lambda time, model: sys_model.sink.termination_condition())
             sim.simulate()
             
-            # All the finished (non-spoiled) products that made it through
-            finished_products = [p for p in sys_model.sink.state.products 
-                                if not hasattr(p, 'is_spoiled') or not p.is_spoiled]
+            # --- UPDATED REPORTING ---
+            all_products = sys_model.sink.state.products
+            finished_products = [p for p in all_products if not p.is_spoiled]
+            spoiled_products = [p for p in all_products if p.is_spoiled]
+            
+            num_finished = len(finished_products)
+            num_spoiled = len(spoiled_products)
+            total_collected = num_finished + num_spoiled
+            
+            print(f"  Products: Finished={num_finished}, Spoiled={num_spoiled} ({num_spoiled/total_collected*100:.1f}%)")
+            
+            if num_finished > 0:
+                avg_flow_finished = sum(p.flow_time for p in finished_products) / num_finished
+                print(f"  Avg Flow Time (Finished): {avg_flow_finished/60.0:.2f} min")
+            
+            if num_spoiled > 0:
+                avg_flow_spoiled = sum(p.flow_time for p in spoiled_products) / num_spoiled
+                print(f"  Avg Flow Time (Spoiled):  {avg_flow_spoiled/60.0:.2f} min")
+
+            # Store only finished product times for the CSV plots (standard assignment behavior)
             values.append([product.flow_time for product in finished_products])
             
             # Print machine statistics
