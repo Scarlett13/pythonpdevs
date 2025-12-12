@@ -29,8 +29,8 @@ gen_rate = 1/60/4  # once every 4 minutes
 # Dispatching strategies
 strategies = {
     # you can comment out one of these lines to reduce the number of experiments (useful for debugging):
-    STRATEGY_FIFO: "fifo",
-    # STRATEGY_PRIORITY: "priority",
+    # STRATEGY_FIFO: "fifo",
+    STRATEGY_PRIORITY: "priority",
 }
 
 # System configurations
@@ -97,7 +97,7 @@ for config_name, config in CONFIGURATIONS.items():
             
             sim = Simulator(sys_model)
             sim.setClassicDEVS()
-            sim.setVerbose()  # <-- uncomment to see what's going on
+            # sim.setVerbose()  # <-- uncomment to see what's going on
             sim.setTerminationCondition(lambda time, model: sys_model.sink.termination_condition())
             sim.simulate()
             
